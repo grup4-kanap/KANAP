@@ -1,0 +1,219 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ilan";
+
+
+    <style>
+
+        * {
+            margin: 0 auto;
+        }
+
+        .banner {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .img-register {
+            width: 100%;
+            height: 150%;
+            position: relative;
+        }
+
+        .Ad {
+            top: 50%;
+            left: 20%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: whitesmoke;
+        }
+
+        .Soyad {
+            top: 50%;
+            left: 60%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: whitesmoke;
+        }
+
+        .Kilo {
+            top: 80%;
+            left: 20%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: whitesmoke;
+        }
+
+        .DTarihi {
+            top: 80%;
+            left: 60%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: whitesmoke;
+        }
+
+        .KayitBtn {
+            top: 120%;
+            left: 40%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: darkred;
+        }
+
+        .KanGrubu {
+            top: 110%;
+            left: 20%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: darkred;
+        }
+
+        .Rh {
+            top: 110%;
+            left: 60%;
+            position: absolute;
+            text-align: left;
+            border-color: darkred;
+            background-color: darkred;
+        }
+
+        .banner {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            top: 10%;
+            left: 40%;
+            position: absolute;
+            color: black;
+            text-size-adjust: 90%;
+        }
+
+        h2 {
+            top: 40%;
+            left: 20%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+
+        h3 {
+            top: 40%;
+            left: 60%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+
+        h4 {
+            top: 70%;
+            left: 20%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+
+        h5 {
+            top: 70%;
+            left: 60%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+
+        h6 {
+            top: 100%;
+            left: 20%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+
+        h7 {
+            top: 100%;
+            left: 60%;
+            position: absolute;
+            color: black;
+            font-size: medium;
+        }
+    </style>
+
+
+}
+<div class="container">
+    <div class="row">
+        <div class="banner">
+            <img class="img-register" src="~/images/Background.png" alt="myLogin">
+            <input class="Ad" type="text" placeholder="Ad">
+            <input class="Soyad" type="text" placeholder="Soyad">
+            <input class="Kilo" type="text" placeholder="Kilo">
+            <input class="DTarihi" type="text" placeholder="Dogum Tarihi">
+            <form action="/Home/KanGrubu" method="get">
+                <h1>İlan Ver</h1>
+                <h2>Adı*</h2>
+                <h3>Soyadı*</h3>
+                <h4>Kilo*</h4>
+                <h5>Doğum Tarihi</h5>
+                <h6>Kan Grubu</h6>
+                <h7>Rh</h7>
+
+                <fieldset>
+
+
+                    <select class="KanGrubu" id="KanGrubu" name="KanGrubu">
+
+                        <option value="0">A</option>
+
+                        <option value="1">B</option>
+
+                        <option value="2">0</option>
+
+                        <option value="3">AB</option>
+
+                        <option selected="selected" value="0"></option>
+
+                    </select>
+
+                    <p><input class="KayitBtn" type="submit" value="İlan Ver" /> </p>
+
+                </fieldset>
+
+            </form>
+
+            <form action="/Home/Uyelik" method="get">
+
+                <fieldset>
+
+
+                    <select class="Rh" id="Rh" name="Rh">
+
+                        <option value="0">Rh -</option>
+
+                        <option value="1">Rh +</option>
+
+                        <option selected="selected" value="0"></option>
+
+                    </select>
+
+                </fieldset>
+
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
